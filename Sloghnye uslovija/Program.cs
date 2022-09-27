@@ -1,16 +1,47 @@
-﻿//Home_work_(Sloghnue_uslovija)_4
+﻿//Home_work_(Sloghnue_uslovija)_3
+
+//a. 43 < 4 || 34 >= 32                                      true
+//b. “red” == “red” && “blue” == “blue”                      true
+//c. 23 > 23 ^ 23 == 23                                      true
+//d. 2 > 2 || 34 == 2 ^ 23 <= 23                             true
+//e. !(3 == 4) || 4 > 2 && 2 > 5                             true
+//f. !((3 > 5 || 7 > 4) && !(9 <= 9 || 39 < 98 ^ 23 == 23))  false
 
 
 
 
+//Home_work_(Sloghnue_uslovija)_4
 
+//a
+/*int GetRange(int min, int max, int[] data)
+{
+    int num = 0;    
+    foreach ( int i in data)
+    {
+        if (!(i > min && i < max)) continue;
+        num++;
+    }
+    return num;
+}
+*///b
+/*int GetRange(int min, int max, int[] data)
+{
+    int num = 0;
+    foreach (int i in data)
+    {
+        if (!(i > min && i < max && i % 2 == 0)) continue;
+        num++;
+    }
+    return num;
+}
+*/
 
 
 
 
 //Home_work_(Sloghnue_uslovija)_5
 
-/*string[] products = GetDataProducts();
+string[] products = GetDataProducts();
 float[] prices_float = GetDataPricesFloat();
 float[] sizes_float = GetDataSizesFloat();
 string[] prices_string = GetDataPricesString();
@@ -131,7 +162,7 @@ string[] GetDataProducts()
     {
         string[] array_fields = array_lines[i].Split(';');
         if (array_fields.Length != 3) continue;
-        array_Products[j++] = array_fields[0];  
+        array_Products[j++] = array_fields[0];
     }
     return array_Products;
 }
@@ -155,4 +186,4 @@ string[] GetData()
     string[] array_lines = file.Split('\n');
     return array_lines;
 }
-*/
+
